@@ -1030,11 +1030,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kam Parsen\\source\\repos\\EpicPMS\\Server\\EpicPMS\\EpicPMS.csproj",
+      "projectUniqueName": "C:\\Users\\Kam Parsen\\Documents\\GitHub\\EpicPMS\\Server\\EpicPMS\\EpicPMS.csproj",
       "projectName": "EpicPMS",
-      "projectPath": "C:\\Users\\Kam Parsen\\source\\repos\\EpicPMS\\Server\\EpicPMS\\EpicPMS.csproj",
+      "projectPath": "C:\\Users\\Kam Parsen\\Documents\\GitHub\\EpicPMS\\Server\\EpicPMS\\EpicPMS.csproj",
       "packagesPath": "C:\\Users\\Kam Parsen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kam Parsen\\source\\repos\\EpicPMS\\Server\\EpicPMS\\obj\\",
+      "outputPath": "C:\\Users\\Kam Parsen\\Documents\\GitHub\\EpicPMS\\Server\\EpicPMS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kam Parsen\\AppData\\Roaming\\NuGet\\NuGet.Config",
