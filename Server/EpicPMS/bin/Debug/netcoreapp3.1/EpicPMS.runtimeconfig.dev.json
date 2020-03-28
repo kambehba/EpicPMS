@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Kam Parsen\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Kam Parsen\\.nuget\\packages"
+    ]
+  }
+}

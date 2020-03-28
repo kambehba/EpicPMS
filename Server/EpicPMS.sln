@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpicPMS", "EpicPMS\EpicPMS.csproj", "{A70123EA-5D67-4B8F-8755-94B49867DC52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A70123EA-5D67-4B8F-8755-94B49867DC52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A70123EA-5D67-4B8F-8755-94B49867DC52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A70123EA-5D67-4B8F-8755-94B49867DC52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A70123EA-5D67-4B8F-8755-94B49867DC52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44F221A2-BED1-43B9-AE01-46BACB18F3D8}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,23 @@
+﻿This project is to Develop Backend service for Epic Property Manager System.
+
+1-Create Data Access Layer to connect to SQL Database...DONE
+
+2-Implement Get All Apartments ...DONE
+
+3-Review SQL database and make sure Apartments and Tenents Tables have correct design in accordance to the Requirments...DONE
+
+3.5- Add Forign Key (Tenent ID ) for Apartments...DONE
+
+4- Insert Fake Data in Database...DONE
+
+5- Implement Get1Beds API...DONE
+
+6- Implement Get2Beds API...DONE
+
+7- Implement Get3Beds API...DONE
+
+8- Start Front End Angular project
+
+9- Implement Buttons to load Apartments with Bed count 
+
+10- Add Assign Apartment to a Tenent Functionality
