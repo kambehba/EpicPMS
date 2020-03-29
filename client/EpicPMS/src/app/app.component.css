@@ -18,16 +18,16 @@
     
     grid-template-areas:
     "a0 a0 a0 a0"
-    "a1 a1 a2 a2"
-    "a1 a1 a2 a2"
-    "a1 a1 a2 a2"
+    "a1 a2 a2 a2"
+    "a1 a2 a2 a2"
+    "a1 a2 a2 a2"
     "a3 a3 a3 a3"
     "a4 a4 a4 a4";
 }
 
 .a0{
     grid-area: a0;
-    background-color:rgb(238, 32, 32);
+    background-color:rgb(57, 77, 100);
 }
 
 .a1{
@@ -48,5 +48,23 @@
 .a4{
     grid-area: a4;
     background-color: rgb(50, 143, 205);
+}
+
+.header{
+    margin: auto;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    color: honeydew;
+    text-justify: auto;
+    padding: 10px;
+
+}
+
+.b1{
+    width: 150px;
+    height: 4 0px;
+    margin: 20px;
+    align-content: center;
 }
 

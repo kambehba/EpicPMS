@@ -20,6 +20,6 @@
 
 8.5- Design Main Page Layout...DONE
 
-9- Implement Buttons to load Apartments with Bed count 
+9- Add 3 buttons to the page to load Apartments...DONNE 
 
-10- Add Assign Apartment to a Tenent Functionality
+10- Implememt client side service to call back end API 

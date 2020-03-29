@@ -5,11 +5,13 @@ using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Http.Cors;
 
 namespace EpicPMS.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    
     public class ApartmentsController : ControllerBase
     {
         [HttpGet]
@@ -23,6 +25,7 @@ namespace EpicPMS.Controllers
           
         }
 
+     //   [EnableCors(origins: "*", headers: "*", methods: "*")]
         [HttpGet]
         [Route("~/api/onebeds")]
         public List<Apartment> GetOneBeds()
