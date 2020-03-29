@@ -16,7 +16,9 @@
 
 7- Implement Get3Beds API...DONE
 
-8- Start Front End Angular project
+8- Start Front End Angular project...DONE
+
+8.5- Design Main Page Layout...DONE
 
 9- Implement Buttons to load Apartments with Bed count 
 
