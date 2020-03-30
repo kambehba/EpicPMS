@@ -1,6 +1,7 @@
 import { Component, Injectable } from '@angular/core';
 import {EpicPmsService} from './Services/EpicPms.service';
-import { from } from 'rxjs';
+import { from, Observable } from 'rxjs';
+import { Apartment } from './models';
 
 @Injectable()
 
@@ -13,7 +14,10 @@ import { from } from 'rxjs';
 
 export class AppComponent {
 
-  constructor(private epicPmsService:EpicPmsService){
+  apartments: Observable<Apartment[]>;
+
+  constructor(private epicPmsService:EpicPmsService,private a:Apartment){
+    
 
   }
   title = 'EpicPMS';
@@ -21,9 +25,13 @@ export class AppComponent {
   dothis()
   {
     
-    this.epicPmsService.getConfig().subscribe(data=>alert(data[0]['rent']));
+   // this.epicPmsService.getConfig().subscribe(data=>alert(data[0]['rent']));
+
+    this.apartments =  this.epicPmsService.getConfig();
+    
   }
 
 
 
 }
+

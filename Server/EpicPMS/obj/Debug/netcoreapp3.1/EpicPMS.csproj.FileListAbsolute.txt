@@ -74,3 +74,4 @@ C:\Users\Kam Parsen\Documents\GitHub\EpicPMS\Server\EpicPMS\bin\Debug\netcoreapp
 C:\Users\Kam Parsen\Documents\GitHub\EpicPMS\Server\EpicPMS\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Kam Parsen\Documents\GitHub\EpicPMS\Server\EpicPMS\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\Kam Parsen\Documents\GitHub\EpicPMS\Server\EpicPMS\obj\Debug\netcoreapp3.1\EpicPMS.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Kam Parsen\Documents\GitHub\EpicPMS\Server\EpicPMS\obj\Debug\netcoreapp3.1\EpicPMS.csprojAssemblyReference.cache

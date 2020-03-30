@@ -10,7 +10,15 @@
   </div>
 
   <div class="a2">
-    Main content
+    <table>
+      <tr *ngFor="let apartment of (apartments | async)">
+        <td>{{apartment.id}}</td>
+        <td>{{apartment.apartmentNumber}}</td>
+        <td>{{apartment.sqf}}</td>
+        <td>{{apartment.rent}}</td>
+      </tr>
+    </table>
+   
   </div>
 
   <div class="a3">

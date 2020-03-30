@@ -84,7 +84,7 @@ namespace EpicPMS
             {
                 _apartments.Add(new Apartment()
                 {
-                    //Id = (int)reader["Id"],
+                    Id = (int)reader["Id"],
                     Bed = (int)reader["Bed"],
                     Bath = (int)reader["Bath"],
                     Rent = (decimal)reader["Rent"],

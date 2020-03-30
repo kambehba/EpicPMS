@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import {EpicPmsService} from './Services/EpicPms.service'
+import { Apartment } from './models';
 
 
 @NgModule({
@@ -12,7 +13,7 @@ import {EpicPmsService} from './Services/EpicPms.service'
   imports: [
     BrowserModule, HttpClientModule,
   ],
-  providers: [EpicPmsService],
+  providers: [EpicPmsService,Apartment],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

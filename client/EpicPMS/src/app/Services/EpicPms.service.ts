@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {Apartment} from '../models';
 
 @Injectable()
 
@@ -10,7 +11,7 @@ export class EpicPmsService {
      }
 
      getConfig() {
-        return this.http.get("https://localhost:44372/api/onebeds");
+        return this.http.get<Apartment[]>("https://localhost:44372/api/onebeds");
       }
 
 

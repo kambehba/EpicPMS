@@ -22,4 +22,6 @@
 
 9- Add 3 buttons to the page to load Apartments...DONNE 
 
-10- Implememt client side service to call back end API 
+10- Implememt client side service to call back end API...DONE
+
+11- Clean Up Httpget and implement Dispaly Apartments Data on Screen  
