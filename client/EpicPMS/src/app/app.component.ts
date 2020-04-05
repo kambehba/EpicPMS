@@ -15,20 +15,46 @@ import { Apartment } from './models';
 export class AppComponent {
 
   apartments: Observable<Apartment[]>;
+  showTable : boolean;
+  showAssignTenent : boolean;
+  ap : number;
 
   constructor(private epicPmsService:EpicPmsService,private a:Apartment){
-    
+    this.showTable = true;
+    this.showAssignTenent = false;
 
   }
   title = 'EpicPMS';
 
-  dothis()
+  getOneBeds()
   {
-    
-   // this.epicPmsService.getConfig().subscribe(data=>alert(data[0]['rent']));
+    this.apartments =  this.epicPmsService.getOneBeds();
+   
+  }
 
-    this.apartments =  this.epicPmsService.getConfig();
-    
+  getTwoBeds()
+  {
+    this.apartments =  this.epicPmsService.getTwoBeds();
+   
+  }
+
+  getThreeBeds()
+  {
+    this.apartments =  this.epicPmsService.getThreeBeds();
+   
+  }
+
+  Assign(apartmentNumber : number)
+  {
+    alert(apartmentNumber);
+    this.ap = apartmentNumber;
+    this.showTable = false;
+    this.showAssignTenent = true;
+  }
+
+  getthis() : number{
+    return this.ap;
+
   }
 
 

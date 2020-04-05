@@ -1,0 +1,80 @@
+<form #assignTenentForm="ngForm">
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input [(ngModel)]="firstName" name="firstName" id="firstName" required #firstNameModel="ngModel" minlength="3" maxlength="15" type="text" class="form-control">
+        
+        <div class="alert alert-danger" *ngIf="firstNameModel.touched && !firstNameModel.valid">
+            
+            <div *ngIf="firstNameModel.errors.required">
+                First Name Required!
+            </div>
+
+            <div *ngIf="firstNameModel.errors.minlength">
+                Minimum Length is 3  
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label for="lasttName">Last Name</label>
+        <input [(ngModel)]="lastName" name="lastName" id="lastName" required #lastNameModel="ngModel" minlength="3" maxlength="15" type="text" class="form-control">
+        
+        <div class="alert alert-danger" *ngIf="lastNameModel.touched && !lastNameModel.valid">
+            
+            <div *ngIf="lastNameModel.errors.required">
+                Last Name Required!
+            </div>
+
+            <div *ngIf="lastNameModel.errors.minlength">
+                Minimum Length is 3 !  
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="startDate">Start Date</label>
+        <input [(ngModel)]="startDate" name="startDate" id="startDate" required #startDateModel="ngModel" minlength="3" maxlength="15" type="date" class="form-control">
+        
+        <div class="alert alert-danger" *ngIf="startDateModel.touched && !lastNameModel.valid">
+            
+            <div *ngIf="startDateModel.errors.required">
+               Start Date is Required !
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="endDate">End Date</label>
+        <input [(ngModel)]="endDate" name="endDate" id="endDate" required #endDateModel="ngModel" minlength="3" maxlength="15" type="date" class="form-control">
+        
+        <div class="alert alert-danger" *ngIf="endDateModel.touched && !endDateModel.valid">
+            
+            <div *ngIf="endDateModel.errors.required">
+               End Date is Required !
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="rent">Rent $</label>
+        <input [(ngModel)]="rent" name="rent" id="rent" required #rentModel="ngModel" min="1" type="number" class="form-control">
+        
+        <div class="alert alert-danger" *ngIf="rentModel.touched && !rentModel.valid">
+            
+            <div *ngIf="rentModel.errors.required">
+               Rent is Required !
+            </div>
+        </div>
+    </div>
+
+  <button class="btn btn-primary" [disabled]="assignTenentForm.form.invalid" (click)="Submit()">Submit</button>
+     
+</form>
+    
+    
+
+
+
+
+

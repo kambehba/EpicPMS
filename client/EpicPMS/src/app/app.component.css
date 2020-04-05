@@ -37,7 +37,7 @@
 
 .a2{
     grid-area: a2;
-    background-color: seagreen;
+    background-color: rgb(35, 43, 61);
 }
 
 .a3{
@@ -66,5 +66,17 @@
     height: 4 0px;
     margin: 20px;
     align-content: center;
+}
+
+th{
+    color: honeydew;
+}
+
+tr{
+    color: khaki;
+}
+
+button{
+    width: 100px;
 }
 

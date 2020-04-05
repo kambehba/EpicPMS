@@ -98,5 +98,32 @@ namespace EpicPMS
             return _apartments;
         }
 
+
+        public bool AssignTenent(Tenent tenent)
+        {
+            _storedProceduer = "AssignTenent";
+          
+            _sqlConnection.Open();
+            _sqlCommand = new SqlCommand(_storedProceduer, _sqlConnection);
+            _sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            
+            _sqlCommand.Parameters.Add("@firstName", System.Data.SqlDbType.NVarChar).Value = tenent.firstName;
+            _sqlCommand.Parameters.Add("@lastName", System.Data.SqlDbType.NVarChar).Value = tenent.lastName;
+            _sqlCommand.Parameters.Add("@startDate", System.Data.SqlDbType.Date).Value = tenent.startDate;
+            _sqlCommand.Parameters.Add("@endDate", System.Data.SqlDbType.Date).Value = tenent.endDate;
+            _sqlCommand.Parameters.Add("@rent", System.Data.SqlDbType.Int).Value = tenent.rent;
+            _sqlCommand.Parameters.Add("@apartmentNumber", System.Data.SqlDbType.Int).Value = tenent.apartmentNumber;
+
+            var reader = _sqlCommand.ExecuteNonQuery();
+
+            _sqlConnection.Close();
+            return true;
+        }
+
+
+
+
+
+
     }
 }

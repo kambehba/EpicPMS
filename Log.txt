@@ -24,4 +24,10 @@
 
 10- Implememt client side service to call back end API...DONE
 
-11- Clean Up Httpget and implement Dispaly Apartments Data on Screen  
+11- Clean Up Http get and implement Dispaly Apartments Data Nicely on Screen...DONE
+
+12- Implement Tenent Assign form view...DONE
+
+12.1 Implement Backend for Assign Tenent
+
+13- Implemet Tenent Discharge   

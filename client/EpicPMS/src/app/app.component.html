@@ -9,17 +9,38 @@
     Navigation
   </div>
 
-  <div class="a2">
-    <table>
-      <tr *ngFor="let apartment of (apartments | async)">
-        <td>{{apartment.id}}</td>
-        <td>{{apartment.apartmentNumber}}</td>
-        <td>{{apartment.sqf}}</td>
-        <td>{{apartment.rent}}</td>
-      </tr>
+  <div class="a2" [hidden]="!showTable">
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Apartment Number</th>
+          <th scope="col">Bed</th>
+          <th scope="col">Bath</th>
+          <th scope="col">Sqf</th>
+          <th scope="col">Rent</th>
+          <th scope="col">Assign Tenent</th>
+          <th scope="col">Discharge Tenent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let apartment of (apartments | async)">
+          <td>{{apartment.apartmentNumber}}</td>
+          <td>{{apartment.bed}}</td>
+          <td>{{apartment.bath}}</td>
+          <td>{{apartment.sqf}}</td>
+          <td>{{apartment.rent}}</td>
+          <td><button class="btn-success" (click)="Assign(apartment.apartmentNumber)">Assign</button></td>
+          <td><button class="btn-danger">Discharge</button></td>
+        </tr>
+      </tbody>
     </table>
    
+   
   </div>
+
+  
+   <app-tenent [apartmentNumber]="getthis()" apart [hidden]="!showAssignTenent" class="a2"></app-tenent>
+  
 
   <div class="a3">
     notifications
@@ -30,9 +51,9 @@
   </div>
 
   <div class="a1">
-    <button class="b1 btn-success" type="button" (click)="dothis()">1 Beds</button>
-    <button class="b1 btn-success" type="button">2 Beds</button>
-    <button class="b1 btn-success" type="button">3 Beds</button>
+    <button class="b1 btn-success" type="button" (click)="getOneBeds()">1 Beds</button>
+    <button class="b1 btn-success" type="button" (click)="getTwoBeds()">2 Beds</button>
+    <button class="b1 btn-success" type="button" (click)="getThreeBeds()">3 Beds</button>
     
   </div>
 

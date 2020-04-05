@@ -9,4 +9,15 @@ export class Apartment{
     sqf : Number;
     
   }
+
+
+  export class Tenent{
+    firstName: string;
+    lastName: string;
+    startDate: Date;
+    endDate: Date;
+    rent : Number;
+    apartmentNumber : Number;
+    
+  }
   
