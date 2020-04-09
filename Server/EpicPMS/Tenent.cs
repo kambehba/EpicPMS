@@ -7,16 +7,28 @@ namespace EpicPMS
 {
     public class Tenent
     {
+        public int Id { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
 
-        public int rent { get; set; }
+        public decimal rent { get; set; }
 
         public int apartmentNumber { get; set; }
 
-        public DateTime startDate { get; set; }
+        private DateTime _startDate;
+        public DateTime startDate
+        {
+            get { return _startDate; }
+            set { _startDate = value;_startDate.ToString("yyyy-MM-DD");
+                }
+        }
 
-        public DateTime endDate { get; set; }
+        private DateTime _enddate;
+        public DateTime endDate
+        {
+            get { return _enddate; }
+            set { _enddate.ToString("yyyy-MM-DD"); }
+        }
 
 
     }

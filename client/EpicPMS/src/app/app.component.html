@@ -9,11 +9,12 @@
     Navigation
   </div>
 
-  <div class="a2" [hidden]="!showTable">
+  <div class="a2" [hidden]="!showApartmentsList">
     <table class="table table-dark">
       <thead>
         <tr>
-          <th scope="col">Apartment Number</th>
+          <th scope="col">Apartment #</th>
+          <th scope="col">Tenent</th>
           <th scope="col">Bed</th>
           <th scope="col">Bath</th>
           <th scope="col">Sqf</th>
@@ -35,11 +36,40 @@
       </tbody>
     </table>
    
+  </div>
+
+  <div class="a2" [hidden]="!showTenentList">
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Rent</th>
+          <th scope="col">Start Date</th>
+          <th scope="col">End Date</th>
+        
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tenent of (tenents | async)">
+          <td>{{tenent.firstName}}</td>
+          <td>{{tenent.lastName}}</td>
+          <td>{{tenent.rent}}</td>
+          <td>{{tenent.startDate | date: 'shortDate'}}</td>
+          <td>{{tenent.endDate | date: 'shortDate'}}</td>
+          
+          
+        </tr>
+      </tbody>
+    </table>
    
   </div>
 
   
-   <app-tenent [apartmentNumber]="getthis()" apart [hidden]="!showAssignTenent" class="a2"></app-tenent>
+   <app-tenent [apartmentNumber]="getthis()" [hidden]="!showAssignTenent" class="a2"></app-tenent>
+
+   <app-tenent-list apart [hidden]="!showAssignTenent"></app-tenent-list>
+
   
 
   <div class="a3">
@@ -54,6 +84,7 @@
     <button class="b1 btn-success" type="button" (click)="getOneBeds()">1 Beds</button>
     <button class="b1 btn-success" type="button" (click)="getTwoBeds()">2 Beds</button>
     <button class="b1 btn-success" type="button" (click)="getThreeBeds()">3 Beds</button>
+    <button class="b1 btn-info" type="button" (click)="getTenents()">Tenents</button>
     
   </div>
 

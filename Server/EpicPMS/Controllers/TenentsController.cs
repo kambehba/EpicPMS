@@ -18,9 +18,11 @@ namespace EpicPMS.Controllers
         // GET: api/Tenents
         [HttpGet]
         [Route("~/api/Tenents/Tenents")]
-        public List<string> Get()
+        public List<Tenent> GetTenents()
         {
-            return new List<string>() { "value1", "value2" };
+            var dataAccess = DataAccess.Instance;
+
+            return dataAccess.GetTenents();
         }
 
         // GET: api/Tenents/5

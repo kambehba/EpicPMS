@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Apartment, Tenent} from '../models';
-import { Observable } from 'rxjs';
+import { Observable,Subject } from 'rxjs';
 
 @Injectable()
 
 export class EpicPmsService {
- 
 
-    constructor(private http: HttpClient) {
+  private _tenentStatusSource = new Subject<number>();
+  tenentStatus = this._tenentStatusSource.asObservable();
+  
+    constructor(private http: HttpClient) {}
 
-    
-     }
+  
 
      getOneBeds() {
         return this.http.get<Apartment[]>("https://localhost:44372/api/apartments/onebeds");
@@ -33,6 +34,14 @@ export class EpicPmsService {
           error:error=>console.error('An Error Has Occured',error)
         });
 
+      }
+
+      tenentStatusUpdate(status : number){
+        this._tenentStatusSource.next(status);
+      }
+
+      getTenents(){
+        return this.http.get<Tenent[]>("https://localhost:44372/api/Tenents/Tenents");
       }
 
       

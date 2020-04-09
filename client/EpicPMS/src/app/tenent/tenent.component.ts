@@ -41,15 +41,10 @@ export class TenentComponent implements OnInit {
     this.tenent.endDate = this.endDate;
     this.tenent.rent = this.rent;
 
-    alert('Date:'+ this.tenent.startDate);
-
-
-    //this.epicPmsService.AssignTenent(this.tenent).subscribe(data=>alert(data));
-
-    //this.epicPmsService.getConfig().subscribe(data=>alert(data));
-
-    
     this.epicPmsService.AssignTenent(this.tenent);
+
+    this.epicPmsService.tenentStatusUpdate(1);
+
   }
 
 }

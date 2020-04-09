@@ -15,6 +15,8 @@ namespace EpicPMS
         private static DataAccess _instance;
 
         private List<Apartment> _apartments { get; set; }
+
+        private List<Tenent> _tenents { get; set; }
         public static DataAccess Instance
         {
             get
@@ -28,37 +30,12 @@ namespace EpicPMS
         private DataAccess()
         {
             _apartments = new List<Apartment>();
+            _tenents = new List<Tenent>();
             _sqlConnection = new SqlConnection("Server=Kam-Office\\MSSQLSERVER01;Database=Epic;Trusted_Connection=True;");
-           // _sqlConnection.Open();
-
-
-
-            // reader.Close();
-            //  dbConnection.Close();
-            //Console.ReadLine();
+          
         }
 
-        public List<Apartment> GetApartments()
-        {
-            _apartments.Clear();
-            _sqlConnection.Open();
-            _sqlCommand = new SqlCommand("Select * from Apartments", _sqlConnection);
-
-            var reader = _sqlCommand.ExecuteReader();
-
-            while (reader.Read())
-            {
-                
-              //  _apartments.Add(new Apartment() { ID = (int)reader["ApartmentId"],Bed= (int)reader["Bed"],Bath= (int)reader["Bath"],
-                                         //         Rent= (decimal)reader["Rent"],sqf = (int)reader["sqf"],TenentId= (int)reader["TenentId"] });
-             
-            }
-            reader.Close();
-            _sqlConnection.Close();
-
-            return _apartments;
-        }
-
+       
         public List<Apartment> GetApartments(int bedcount)
         {
             switch(bedcount)
@@ -96,6 +73,35 @@ namespace EpicPMS
             reader.Close();
             _sqlConnection.Close();
             return _apartments;
+        }
+
+        public List<Tenent> GetTenents()
+        {
+            _storedProceduer = "GetTenents";
+
+            _tenents.Clear();
+            _sqlConnection.Open();
+            _sqlCommand = new SqlCommand(_storedProceduer, _sqlConnection);
+            _sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            var reader = _sqlCommand.ExecuteReader();
+
+            while (reader.Read())
+            {
+                _tenents.Add(new Tenent()
+                {
+                    
+                    Id = (int)reader["Id"],
+                    firstName = (string)reader["FirstName"],
+                    lastName = (string)reader["LastName"],
+                    startDate = (DateTime)reader["StartDate"],
+                    endDate = (DateTime)reader["EndDate"],
+                    rent = (decimal)reader["Rent"],
+                });
+
+            }
+            reader.Close();
+            _sqlConnection.Close();
+            return _tenents;
         }
 
 

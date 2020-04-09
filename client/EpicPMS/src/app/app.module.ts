@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import {EpicPmsService} from './Services/EpicPms.service'
 import { Apartment } from './models';
 import { TenentComponent } from './tenent/tenent.component';
+import { TenentListComponent } from './tenent-list/tenent-list.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TenentComponent
+    TenentComponent,
+    TenentListComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,FormsModule

@@ -15,18 +15,8 @@ namespace EpicPMS.Controllers
     
     public class ApartmentsController : ControllerBase
     {
-        [HttpGet]
-        public List<Apartment> GetApartments()
-        {
-            var dataAccess = DataAccess.Instance;
-           
-            //var f = new List<Apartment>();
-            //f.Add(new Apartment() { Bath = 2, Bed = 8, sqf = 785 });
-            return dataAccess.GetApartments();
-          
-        }
+       
 
-        //[EnableCors(origins: "*", headers: "*", methods: "*")]
         [HttpGet]
         [Route("~/api/apartments/onebeds")]
         public List<Apartment> GetOneBeds()
@@ -36,16 +26,7 @@ namespace EpicPMS.Controllers
 
         }
 
-        //[HttpGet]
-        //[Route("~/api/apartments/onebeds")]
-        //public HttpResponseMessage GetOneBeds()
-        //{
-        //    var fg = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
-        //    var dataAccess = DataAccess.Instance;
-        //    return fg;
-
-        //}
-
+        
         [HttpGet]
         [Route("~/api/apartments/twobeds")]
         public List<Apartment> GetTwoBeds()

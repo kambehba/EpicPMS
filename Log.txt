@@ -28,6 +28,10 @@
 
 12- Implement Tenent Assign form view...DONE
 
-12.1 Implement Backend for Assign Tenent
+12.1 Implement Backend for Assign Tenent...DONE
 
-13- Implemet Tenent Discharge   
+12.2 Show Tenent Name on Assigned Apartment Row after it is Assigned 
+
+13- Implemet Show ALL Tenents
+
+14- Implemet Discharge Tenent   
